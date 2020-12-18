@@ -1,0 +1,12 @@
+@import 'import/sass_classes.scss';
+
+body{
+    @include margin(top, 50px);
+    @include fontSettings(24px, 700, lime);
+    @include padding(bottom, 50px);
+}
+h1{
+    margin: auto;
+    display: inline-block;
+    @include fontSettings(36px, 900, darkblue);
+}
