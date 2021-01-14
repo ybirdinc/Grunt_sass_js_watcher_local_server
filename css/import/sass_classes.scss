@@ -1,4 +1,29 @@
 $gutter: 5px;
+
+/* media queries */
+@mixin min-dikeyTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin min-yatayTablet {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin max-dikeyTablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin max-yatayTablet {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
 @mixin fontSmooth(){
   font-display: block;
   font-smooth: always;
