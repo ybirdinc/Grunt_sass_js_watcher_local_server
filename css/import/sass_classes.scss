@@ -204,6 +204,18 @@ $gutter: 5px;
   }
 }
 
+@mixin minHeight($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin maxHeight($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
 @mixin clearfix {
   &:after {
     content: '';
