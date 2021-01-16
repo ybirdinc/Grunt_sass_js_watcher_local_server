@@ -78,6 +78,10 @@ $gutter: 5px;
 }
 
 @mixin transition($string) {
+  @if ($string == '' or $string == null) {
+    $string: all 350ms ease-in-out;
+  }
+
   -webkit-transition: $string;
   -moz-transition   : $string;
   -ms-transition    : $string;
