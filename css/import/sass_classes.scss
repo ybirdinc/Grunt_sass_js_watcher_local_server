@@ -76,7 +76,11 @@ $gutter: 5px;
   -moz-box-shadow   : $string;
   box-shadow        : $string;
 }
-
+@mixin text-shadow($string) {
+  -webkit-text-shadow: $string;
+  -moz-text-shadow   : $string;
+  text-shadow        : $string;
+}
 @mixin transition($string) {
   @if ($string == '' or $string == null) {
     $string: all 350ms ease-in-out;
