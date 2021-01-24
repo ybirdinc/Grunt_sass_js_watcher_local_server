@@ -277,23 +277,21 @@ $gutter: 5px;
 //
 
 // SCSS mixin to convert Photoshop drop shadows to CSS3 box-shadow
-// thanks to: Yuki Yamashita
-// https://codepen.io/YukiYamashina/pen/gaqjZK
 // usage: @include dropShadowPStoCSS( 146, 113, 59, 65, 90, 6/4, 0, 32/4 );
 /*
 
-Usage                               :
-@include dropShadowPStoCSS( 146, 113, 59, 65, 90, 6/4, 2.1, 32/4 );
+Usage:
+@include dropShadowPStoCSS( 146, 113, 59, 65, 90, 6/4, 0, 32/4 );
 
 for the following Photoshop settings:
-R                                   : 146
-G                                   : 113
-B                                   : 59
-Opacity(%)                          : 65
-Angle                               : 90
-Distance (px, @1280px canvas)       : 6
-Spread (%)                          : 21
-Size (px, @1280px canvas)           : 32
+R: 146
+G: 113
+B: 59
+Opacity(%): 65
+Angle: 90
+Distance (px, @1280px canvas): 6
+Spread (%): 6
+Size (px, @1280px canvas): 32
 
 */
 
@@ -372,11 +370,11 @@ Size (px, @1280px canvas)           : 32
     $css_offset_x: (cos($css_angle)*$ps_distance);
     $css_spread_radius: ($ps_size*$ps_spread / 100);
     $css_blur_radius: ($ps_size - $ps_spread);
-    box-shadow: #{round($css_offset_x)}px #{round($css_offset_y)}px #{round($css_blur_radius)}px #{round($css_spread_radius)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity );
+    @include box-shadow(#{round($css_offset_x)}px #{round($css_offset_y)}px #{round($css_blur_radius)}px #{round($css_spread_radius)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity ));
     @media ( min-width: 640px ) {
-        box-shadow: #{round($css_offset_x*2)}px #{round($css_offset_y*2)}px #{round($css_blur_radius*2)}px #{round($css_spread_radius*2)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity );
+      @include box-shadow(#{round($css_offset_x*2)}px #{round($css_offset_y*2)}px #{round($css_blur_radius*2)}px #{round($css_spread_radius*2)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity ));
     }
     @media ( min-width: 1280px ) {
-        box-shadow: #{round($css_offset_x*4)}px #{round($css_offset_y*4)}px #{round($css_blur_radius*4)}px #{round($css_spread_radius*4)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity );
+      @include box-shadow(#{round($css_offset_x*4)}px #{round($css_offset_y*4)}px #{round($css_blur_radius*4)}px #{round($css_spread_radius*4)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity ));
     }
 }
