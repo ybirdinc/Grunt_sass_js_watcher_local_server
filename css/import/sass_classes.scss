@@ -282,18 +282,18 @@ $gutter: 5px;
 // usage: @include dropShadowPStoCSS( 146, 113, 59, 65, 90, 6/4, 0, 32/4 );
 /*
 
-Usage:
-@include dropShadowPStoCSS( 146, 113, 59, 65, 90, 6/4, 6, 32/4 );
+Usage                               :
+@include dropShadowPStoCSS( 146, 113, 59, 65, 90, 6/4, 2.1, 32/4 );
 
 for the following Photoshop settings:
-R: 146
-G: 113
-B: 59
-Opacity(%): 65
-Angle: 90
-Distance (px, @1280px canvas): 6
-Spread (%): 6
-Size (px, @1280px canvas): 32
+R                                   : 146
+G                                   : 113
+B                                   : 59
+Opacity(%)                          : 65
+Angle                               : 90
+Distance (px, @1280px canvas)       : 6
+Spread (%)                          : 21
+Size (px, @1280px canvas)           : 32
 
 */
 
