@@ -378,3 +378,9 @@ Size (px, @1280px canvas): 32
       @include box-shadow(#{round($css_offset_x*4)}px #{round($css_offset_y*4)}px #{round($css_blur_radius*4)}px #{round($css_spread_radius*4)}px rgba( $ps_red, $ps_green, $ps_blue, $css_opacity ));
     }
 }
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
