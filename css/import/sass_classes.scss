@@ -42,7 +42,6 @@ $gutter: 5px;
   -moz-border-radius   : $gutter;
   -webkit-border-radius: $gutter;
   border-radius        : $gutter;
-  overflow             : hidden;
 }
 
 @mixin border($side, $specs) {
