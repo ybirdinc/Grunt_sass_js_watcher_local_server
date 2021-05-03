@@ -42,7 +42,6 @@ $gutter: 5px;
   -moz-border-radius   : $gutter;
   -webkit-border-radius: $gutter;
   border-radius        : $gutter;
-  overflow             : hidden;
 }
 
 @mixin border($side, $specs) {
@@ -272,4 +271,11 @@ $gutter: 5px;
   #{$property}: -moz-calc(#{$expression});
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
 }
