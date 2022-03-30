@@ -11,6 +11,7 @@ module.exports = function (grunt) {
         ]
       },
       options: {
+        port: 8080,
         watchTask: true,
         server: {
           baseDir: "./",
